@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+body{
+    background: #eee;
+
+}
+
+.container{
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+article{
+    padding: 1rem;
+    background-color:#f7f7f7;
+    border-radius: 10px;
+    width: fit-content;
+    margin-top: 1rem;
+}
+
+.video{
+    width: max-content;
+}
+
+a:link    { color: black; }
+a:visited { color: green; }
+a.reverted { color: revert; }
+a:hover {color: rgb(88, 53, 34);}
+
+
