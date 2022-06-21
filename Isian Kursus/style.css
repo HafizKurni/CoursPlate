@@ -9,7 +9,7 @@
 }
 
 body{
-    background: #eee;
+    background: rgb(239, 247, 255);
 
 }
 
@@ -23,7 +23,7 @@ body{
 
 article{
     padding: 1rem;
-    background-color:#f7f7f7;
+    background-color:#eaf4ff;
     border-radius: 10px;
     width: fit-content;
     margin-top: 1rem;
@@ -33,9 +33,20 @@ article{
     width: max-content;
 }
 
-a:link    { color: black; }
-a:visited { color: green; }
-a.reverted { color: revert; }
-a:hover {color: rgb(88, 53, 34);}
+.iframe-container{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 56.25%;
+}
 
-
+.responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}

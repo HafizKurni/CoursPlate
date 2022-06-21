@@ -4,83 +4,260 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="/Isian Kursus/style.css" />
-    <title>Kursus</title>
+    <title>Kursus Blender</title>
   </head>
-  <body>
-    <div class="container">
-      <h1>Blender for Complete and Total Beginners By Chris Plush</h1>
-      <article class="main-video">
-        <div class="video">
-          <iframe
+  <body class="max-h-screen w-screen ">
+
+    <nav class="bg-gray-800">
+      <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+        <div class="relative flex items-center justify-between h-16">
+          <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+            <!-- Mobile menu button-->
+            <button 
+              id="dropdownButton"
+              type="button"
+              class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              aria-controls="mobile-menu"
+              aria-expanded="false"
+            >
+              <span class="sr-only">Open main menu</span>
+              <!--
+              Icon when menu is closed.
+  
+              Heroicon name: outline/menu
+  
+              Menu open: "hidden", Menu closed: "block"
+            -->
+              <svg
+                class="hidden h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+              <!--
+              Icon when menu is open.
+  
+              Heroicon name: outline/x
+  
+              Menu open: "block", Menu closed: "hidden"
+            -->
+              <svg
+                class="hidden h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+          class="flex-1 flex items-start justify-start sm:items-stretch sm:justify-start"
+          >
+            <div class="flex-shrink-0 flex items-center">
+              <!-- <img
+                class="block lg:hidden h-8 w-auto"
+                src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
+                alt="Workflow"
+              />
+              <img
+                class="hidden lg:block h-8 w-auto"
+                src="https://tailwindui.com/img/logos/workflow-logo-indigo-500-mark-white-text.svg"
+                alt="Workflow"
+              /> -->
+            </div>
+            <div  class="block sm:ml-6">
+              <div id="dropdownMenu" class="flex space-x-4">
+                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                <a
+                  href="/Index.html"
+                  class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                  aria-current="page"
+                  >Main Course</a
+                  >
+                  
+                  <a
+                  href="#"
+                  class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
+                  >In progress</a
+                >
+              </div>
+            </div>
+          </div>
+          <div
+            class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
+          >
+            <button
+              type="button"
+              class="bg-gray-800 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+            >
+              <span class="sr-only">View notifications</span>
+              <!-- Heroicon name: outline/bell -->
+              <svg
+                class="h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
+                />
+              </svg>
+            </button>
+
+            <!-- Profile dropdown -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile menu, show/hide based on menu state. -->
+  
+    </nav>
+
+    <div class="flex justify-center items-center mt-12 flex-col">
+      <h1 class="flex sm:text-3xl text-xl text-center font-bold text-gray-900">
+        Blender for Complete and Total Beginners By Chris Plush
+      </h1>
+      <article class="sm:w-max w-screen p-4 my-4 bg-slate-50 rounded-xl">
+        <div class="iframe-container">
+          <iframe class="responsive-iframe"
             src="https://drive.google.com/file/d/1Fl9EsbYZ2oA_WJGOmmhKJBp2UvCsN1WZ/preview"
             name="videoBesar"
-            width="852"
-            height="480"
+            width="100%"
+            height="100%"
             style="border: none"
             allow="autoplay"
           ></iframe>
         </div>
-        <a
-          href="https://drive.google.com/file/d/1Fl9EsbYZ2oA_WJGOmmhKJBp2UvCsN1WZ/preview"
-          target="videoBesar"
-          >01. Introduction to the Course
-        </a>
-        <br />
+        <div class="grup grid  sm:grid-cols-3 mt-4">
+            <a
+            class="hover:text-cyan-600 visited:text-cyan-800"
+            href="https://drive.google.com/file/d/1Fl9EsbYZ2oA_WJGOmmhKJBp2UvCsN1WZ/preview"
+            target="videoBesar"
+            >01. Introduction to the Course
+          </a>
 
-        <a
-          href="https://drive.google.com/file/d/1DTADAWJQhtYdrqOPNB3mt63okTsJ_7bw/preview"
-          target="videoBesar"
-          >02. Downloading Blender
-        </a>
-        <br />
-        <a
-          href="https://drive.google.com/file/d/1DYsy4n27WF5MUuViALoL_iOqUPdM9Aqu/preview"
-          target="videoBesar"
-          >03. A Quick Tour of Blender's Interface
-        </a>
-        <br />
-        <a
-          href="https://drive.google.com/file/d/1DW9Ot2g_QfcRlpG5cWGXcP8WPWAFL4nw/preview"
-          target="videoBesar"
-          >04. Navigating Through 3D Space
-        </a>
-        <br />
-        <a
-          href="https://drive.google.com/file/d/1DX8k9HMTMcEyyKeaisJxPJyUZa45Mg89/preview"
-          target="videoBesar"
-          >05. User Preferences
-        </a>
-        <br />
-        <a
-          href="https://drive.google.com/file/d/1BmHOqyXmr7ETeIYBBiEYi9Rv5CAdlh6c/preview"
-          target="videoBesar"
-          >06. Selection Tools
-        </a>
-        <br />
-        <a
-          href="https://drive.google.com/file/d/1Bo7QxeFXinRpblxwaLEmEk0NWKYjEnss/preview"
-          target="videoBesar"
-          >07. Basic Transform Tool
-        </a>
-        <br />
-        <a
-          href="https://drive.google.com/file/d/1CZZFMo6VDOtoj8Py1EU2KKsCDer7-Qge/preview"
-          target="videoBesar"
-          >08. Global Axis Transform
-        </a>
-        <br />
-        <a
-          href="https://drive.google.com/file/d/1Cucvju8FmlxpTe3pobTB20OC9wQTkNN4/preview"
-          target="videoBesar"
-          >09. Local Axis Transform
-        </a>
-        <br />
-        <a
-          href="https://drive.google.com/file/d/1BkpiTervix5uvqs4eZlSMV50lRSPkYTM/preview"
-          target="videoBesar"
-          >10. Snapping Transform
-        </a>
+          <a
+            class="hover:text-cyan-600"
+            href="https://drive.google.com/file/d/1DTADAWJQhtYdrqOPNB3mt63okTsJ_7bw/preview"
+            target="videoBesar"
+            >02. Downloading Blender
+          </a>
+
+          <a
+            class="hover:text-cyan-600"
+            href="https://drive.google.com/file/d/1DYsy4n27WF5MUuViALoL_iOqUPdM9Aqu/preview"
+            target="videoBesar"
+            >03. A Quick Tour of Blender's Interface
+          </a>
+
+          <a
+            class="hover:text-cyan-600"
+            href="https://drive.google.com/file/d/1DW9Ot2g_QfcRlpG5cWGXcP8WPWAFL4nw/preview"
+            target="videoBesar"
+            >04. Navigating Through 3D Space
+
+          <a
+            class="hover:text-cyan-600"
+            href="https://drive.google.com/file/d/1DX8k9HMTMcEyyKeaisJxPJyUZa45Mg89/preview"
+            target="videoBesar"
+            >05. User Preferences
+          </a>
+
+          <a
+            class="hover:text-cyan-600"
+            href="https://drive.google.com/file/d/1BmHOqyXmr7ETeIYBBiEYi9Rv5CAdlh6c/preview"
+            target="videoBesar"
+            >06. Selection Tools
+          </a>
+
+          <a
+            class="hover:text-cyan-600"
+            href="https://drive.google.com/file/d/1Bo7QxeFXinRpblxwaLEmEk0NWKYjEnss/preview"
+            target="videoBesar"
+            >07. Basic Transform Tool
+          </a>
+
+          <a
+            class="hover:text-cyan-600"
+            href="https://drive.google.com/file/d/1CZZFMo6VDOtoj8Py1EU2KKsCDer7-Qge/preview"
+            target="videoBesar"
+            >08. Global Axis Transform
+          </a>
+
+          <a
+            class="hover:text-cyan-600"
+            href="https://drive.google.com/file/d/1Cucvju8FmlxpTe3pobTB20OC9wQTkNN4/preview"
+            target="videoBesar"
+            >09. Local Axis Transform
+          </a>
+
+          <a
+            class="hover:text-cyan-600"
+            href="https://drive.google.com/file/d/1C8yCVI-cxwOGz1ad_ui_Ooej1v-k8FK8/preview"
+            target="videoBesar"
+            >11. The 3D Cursor
+          </a>
+          <a
+            class="hover:text-cyan-600"
+            href="https://drive.google.com/file/d/1ChbpVrEn1p1e9KJpJFYsq9xtTLfSLcoR/preview"
+            target="videoBesar"
+            >12. Shading Modes
+          </a>
+          <a
+            class="hover:text-cyan-600"
+            href="https://drive.google.com/file/d/1C2GhJXRD3QClQ9ViXMbTrN5eHsZcJCIG/preview"
+            target="videoBesar"
+            >13. Smooth and Flat Shading
+          </a>
+          <a
+            class="hover:text-cyan-600"
+            href="https://drive.google.com/file/d/1Guvv_voRZl4rJvpB-xbwGHoq7Cn1kU5s/preview"
+            target="videoBesar"
+            >14. Working in Edit Mode
+          </a>
+          <a
+            class="hover:text-cyan-600"
+            href="https://drive.google.com/file/d/1HhqMdH2wTytCQRp8kZQqc8F6cId1E5xD/preview"
+            target="videoBesar"
+            >15. Essential Modeling Tools
+          </a>
+          <a
+            class="hover:text-cyan-600"
+            href="https://drive.google.com/file/d/1BkpiTervix5uvqs4eZlSMV50lRSPkYTM/preview"
+            target="videoBesar"
+            >16. Modeling a Snowman
+          </a>
+          <a
+            class="hover:text-cyan-600"
+            href="https://drive.google.com/file/d/1Hic90KhsL1Lh6jD9nDbGAnOhT11FU1gh/preview"
+            target="videoBesar"
+            >10. Snapping Transform
+          </a>
+        </div>
       </article>
     </div>
   </body>
